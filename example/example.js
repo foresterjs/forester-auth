@@ -1,19 +1,20 @@
 "use strict";
 
 var Forester = require('forester');
+var foresterAuth = require('../lib');
+
+
 var app = new Forester();
 
 app.use(require('forester-explorer'));
 
-app.use(require('../lib'));
+app.use(foresterAuth({"jwt": {"secret": "change_me"}}));
 
-app.registerConfig(require('./json/config.json'));
 app.registerCollection(require('./json/collections/authors.json'));
 app.registerCollection(require('./json/collections/articles.json'));
 
 app.registerDataSource(require('./json/db1.json'));
 app.registerMappings(require('./json/mappings.json'));
-
 
 app.boot()
   .then(() => {
