@@ -1,10 +1,10 @@
 {
   "name": "forester-auth",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Auth for Forester",
   "main": "build/index.js",
   "scripts": {
-    "preversion": "npm run clean && npm run-script clean && npm run-script build",
+    "prepublish": "npm run clean && npm run-script clean && npm run-script build",
     "clean": "rm -rf ./build && mkdir ./build",
     "build": "babel -d ./build ./lib -s",
     "example": "babel-node example/example.js",
@@ -38,7 +38,9 @@
     "plugins": [
       "transform-async-to-generator"
     ],
-    "presets": ["es2015"],
+    "presets": [
+      "es2015"
+    ],
     "ignore": false
   }
 }
