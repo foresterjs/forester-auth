@@ -6,7 +6,7 @@ var foresterExplorer = require('forester-explorer');
 
 var app = new Forester();
 
-app.use(foresterExplorer);
+app.use(foresterExplorer());
 app.use(foresterAuth({"jwt": {"secret": "change_me"}}));
 
 app.registerCollection(require('./json/collections/authors.json'));
