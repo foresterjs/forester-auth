@@ -1,0 +1,16 @@
+web:
+  image: node
+  volumes:
+    - ".:/usr/src/app"
+  dns: 8.8.8.8
+  working_dir: /usr/src/app
+  links:
+    - db
+  ports:
+    - "3000:3000"
+  command: npm run-script example
+
+db:
+  image: mongo
+  ports:
+    - "27017:27017"

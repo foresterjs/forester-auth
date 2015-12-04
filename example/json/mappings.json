@@ -1,0 +1,18 @@
+[
+  {
+    "collection": "authors",
+    "datasource": "db1"
+  },
+  {
+    "collection": "articles",
+    "datasource": "db1"
+  },
+  {
+    "collection": "_tokens",
+    "datasource": "db1"
+  },
+  {
+    "collection": "_users",
+    "datasource": "db1"
+  }
+]
