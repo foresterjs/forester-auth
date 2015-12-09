@@ -1,6 +1,6 @@
 {
   "name": "forester-auth",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Auth for Forester",
   "main": "build/index.js",
   "scripts": {
